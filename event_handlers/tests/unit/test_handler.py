@@ -1,6 +1,6 @@
 import pytest
 
-from hello_world import app
+from kms_event_handler import app
 from schema.aws.kms.awsapicallviacloudtrail import AWSEvent
 from schema.aws.kms.awsapicallviacloudtrail import AWSAPICallViaCloudTrail
 from schema.aws.kms.awsapicallviacloudtrail import Marshaller

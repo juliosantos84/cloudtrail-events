@@ -1,15 +1,33 @@
 {
-  "id":"7bf73129-1428-4cd3-a780-95db273d1602",
-  "detail-type":"AWS API Call via CloudTrail",
-  "source":"aws.kms",
-  "account":"123456789012",
-  "time":"2015-11-11T21:29:54Z",
-  "region":"us-east-1",
-  "version":"0",
-  "resources":[
-    "arn:aws:ec2:us-east-1:123456789012:instance/i-abcd1111"
+  "eventVersion": "1.05",
+  "userIdentity": {
+      "type": "IAMUser",
+      "principalId": "AIDAUKQWI4OBUDZPAK55J",
+      "arn": "arn:aws:iam::297473205123:user/KeyperUserkeyper-crypto-gifts",
+      "accountId": "297473205123",
+      "accessKeyId": "AKIAUKQWI4OB27JAGLXD",
+      "userName": "KeyperUserkeyper-crypto-gifts"
+  },
+  "eventTime": "2019-12-29T00:42:17Z",
+  "eventSource": "kms.amazonaws.com",
+  "eventName": "Decrypt",
+  "awsRegion": "us-east-1",
+  "sourceIPAddress": "24.157.40.250",
+  "userAgent": "aws-sdk-java/1.11.618 Linux/4.9.125-linuxkit OpenJDK_64-Bit_Server_VM/25.212-b04 java/1.8.0_212 vendor/IcedTea",
+  "requestParameters": {
+      "encryptionAlgorithm": "SYMMETRIC_DEFAULT"
+  },
+  "responseElements": null,
+  "requestID": "4af30b02-d47f-4d3d-99e4-9cb67d979d3a",
+  "eventID": "9ce23e8e-8632-4da4-bb9a-1b0f5d8ea53a",
+  "readOnly": true,
+  "resources": [
+      {
+          "accountId": "297473205123",
+          "type": "AWS::KMS::Key",
+          "ARN": "arn:aws:kms:us-east-1:297473205123:key/b8ea2319-143e-41ad-a197-32ef91fbda29"
+      }
   ],
-  "detail":{
-    "ADD-YOUR-FIELDS-HERE":""
-  }
+  "eventType": "AwsApiCall",
+  "recipientAccountId": "297473205123"
 }

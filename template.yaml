@@ -1,9 +1,7 @@
 AWSTemplateFormatVersion: '2010-09-09'
 Transform: AWS::Serverless-2016-10-31
 Description: >
-  aws-events
-
-  Sample SAM Template for aws-events
+  cloudtrail-events
 
 # More info about Globals: https://github.com/awslabs/serverless-application-model/blob/master/docs/globals.rst
 Globals:
@@ -23,10 +21,8 @@ Resources:
           Properties:
             #EventBusName: your-event-bus-name #Uncomment this if your events are not on the 'default' event bus
             Pattern:
-              source:
-                - aws.kms
-              detail-type:
-                - AWS API Call via CloudTrail
+              eventSource:
+                - kms.amazonaws.com
 
 Outputs:
   # ServerlessRestApi is an implicit API created out of Events key under Serverless::Function

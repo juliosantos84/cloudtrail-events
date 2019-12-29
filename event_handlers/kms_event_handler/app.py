@@ -1,6 +1,6 @@
-from schema.aws.kms.awsapicallviacloudtrail import Marshaller
-from schema.aws.kms.awsapicallviacloudtrail import AWSEvent
-from schema.aws.kms.awsapicallviacloudtrail import AWSAPICallViaCloudTrail
+# from schema.aws.kms.awsapicallviacloudtrail import Marshaller
+# from schema.aws.kms.awsapicallviacloudtrail import AWSEvent
+# from schema.aws.kms.awsapicallviacloudtrail import AWSAPICallViaCloudTrail
 import json
 
 def lambda_handler(event, context):
@@ -24,15 +24,16 @@ def lambda_handler(event, context):
     """
 
     #Deserialize event into strongly typed object
-    awsEvent:AWSEvent = Marshaller.unmarshall(event, AWSEvent)
-    detail:AWSAPICallViaCloudTrail = awsEvent.detail
+    # awsEvent:AWSEvent = Marshaller.unmarshall(event, AWSEvent)
+    # detail:AWSAPICallViaCloudTrail = awsEvent.detail
 
     #Execute business logic
 
     #Make updates to event payload, if desired
-    awsEvent.detail_type = "HelloWorldFunction updated event of " + awsEvent.detail_type;
+    # awsEvent.detail_type = "HelloWorldFunction updated event of " + awsEvent.detail_type;
 
-    print (json.dumps(awsEvent.detail))
+    print (json.dumps(event))
 
+    return event
     #Return event for further processing
-    return Marshaller.marshall(awsEvent)
+    # return Marshaller.marshall(awsEvent)
