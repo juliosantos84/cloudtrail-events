@@ -21,7 +21,7 @@ Resources:
           Properties:
             #EventBusName: your-event-bus-name #Uncomment this if your events are not on the 'default' event bus
             Pattern:
-              eventSource:
+              source:
                 - kms.amazonaws.com
 
 Outputs:
